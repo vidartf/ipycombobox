@@ -19,7 +19,7 @@ import {
   MODULE_NAME, MODULE_VERSION
 } from './version';
 
-const EXTENSION_ID = 'jupyter-datalist:plugin';
+const EXTENSION_ID = 'jupyter-combobox:plugin';
 
 /**
  * The example plugin.

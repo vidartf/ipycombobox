@@ -5,27 +5,27 @@ Installation
 ============
 
 
-The simplest way to install ipydatalist is via pip::
+The simplest way to install ipycombobox is via pip::
 
-    pip install ipydatalist
+    pip install ipycombobox
 
 or via conda::
 
-    conda install ipydatalist
+    conda install ipycombobox
 
 
 If you installed via pip, and notebook version < 5.3, you will also have to
 install / configure the front-end extension as well. If you are using classic
 notebook (as opposed to Jupyterlab), run::
 
-    jupyter nbextension install [--sys-prefix / --user / --system] --py ipydatalist
+    jupyter nbextension install [--sys-prefix / --user / --system] --py ipycombobox
 
-    jupyter nbextension enable [--sys-prefix / --user / --system] --py ipydatalist
+    jupyter nbextension enable [--sys-prefix / --user / --system] --py ipycombobox
 
 with the `appropriate flag`_. If you are using Jupyterlab, install the extension
 with::
 
-    jupyter labextension install jupyter-datalist
+    jupyter labextension install jupyter-combobox
 
 If you are installing using conda, these commands should be unnecessary, but If
 you need to run them the commands should be the same (just make sure you choose the

@@ -145,12 +145,12 @@ $RECYCLE.BIN/
 # ----
 
 **/node_modules/
-ipydatalist/nbextension/static/index.*
-ipydatalist/labextension/*.tgz
+ipycombobox/nbextension/static/index.*
+ipycombobox/labextension/*.tgz
 
 # Coverage data
 # -------------
 **/coverage/
 
 # Packed lab extensions
-ipydatalist/labextension
+ipycombobox/labextension

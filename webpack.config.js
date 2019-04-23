@@ -27,7 +27,7 @@ module.exports = [
     entry: './src/extension.ts',
     output: {
       filename: 'index.js',
-      path: path.resolve(__dirname, 'ipydatalist', 'nbextension', 'static'),
+      path: path.resolve(__dirname, 'ipycombobox', 'nbextension', 'static'),
       libraryTarget: 'amd'
     },
     module: {
@@ -39,7 +39,7 @@ module.exports = [
   },
 
   /**
-   * Embeddable jupyter-datalist bundle
+   * Embeddable jupyter-combobox bundle
    *
    * This bundle is almost identical to the notebook extension bundle. The only
    * difference is in the configuration of the webpack public path for the
@@ -54,8 +54,8 @@ module.exports = [
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'amd',
-        library: "jupyter-datalist",
-        publicPath: 'https://unpkg.com/jupyter-datalist@' + version + '/dist/'
+        library: "jupyter-combobox",
+        publicPath: 'https://unpkg.com/jupyter-combobox@' + version + '/dist/'
     },
     devtool: 'source-map',
     module: {
@@ -76,7 +76,7 @@ module.exports = [
     output: {
       filename: 'embed-bundle.js',
       path: path.resolve(__dirname, 'docs', 'source', '_static'),
-      library: "jupyter-datalist",
+      library: "jupyter-combobox",
       libraryTarget: 'amd'
     },
     module: {

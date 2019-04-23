@@ -19,7 +19,7 @@ from setuptools import setup
 
 
 # The name of the project
-name = 'ipydatalist'
+name = 'ipycombobox'
 
 # Ensure a valid python version
 ensure_python('>=3.4')
@@ -44,10 +44,10 @@ package_data_spec = {
 }
 
 data_files_spec = [
-    ('share/jupyter/nbextensions/ipydatalist',
+    ('share/jupyter/nbextensions/ipycombobox',
         nb_path, '*.js*'),
     ('share/jupyter/lab/extensions', lab_path, '*.tgz'),
-    ('etc/jupyter/nbconfig/notebook.d' , HERE, 'ipydatalist.json')
+    ('etc/jupyter/nbconfig/notebook.d' , HERE, 'ipycombobox.json')
 ]
 
 
@@ -61,14 +61,14 @@ cmdclass['jsdeps'] = combine_commands(
 
 setup_args = dict(
     name            = name,
-    description     = 'A widget for an <datalist> HMTL entry',
+    description     = 'A widget for an <combobox> HMTL entry',
     version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
     packages        = find_packages(),
     author          = 'Vidar Tonaas Fauske',
     author_email    = 'vidartf@gmail.com',
-    url             = 'https://github.com/vidartf/ipydatalist',
+    url             = 'https://github.com/vidartf/ipycombobox',
     license         = 'BSD',
     platforms       = "Linux, Mac OS X, Windows",
     keywords        = ['Jupyter', 'Widgets', 'IPython'],

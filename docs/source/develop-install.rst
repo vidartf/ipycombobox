@@ -3,11 +3,11 @@ Developer install
 =================
 
 
-To install a developer version of ipydatalist, you will first need to clone
+To install a developer version of ipycombobox, you will first need to clone
 the repository::
 
-    git clone https://github.com/vidartf/ipydatalist
-    cd ipydatalist
+    git clone https://github.com/vidartf/ipycombobox
+    cd ipycombobox
 
 Next, install it with a develop install using pip::
 
@@ -17,9 +17,9 @@ Next, install it with a develop install using pip::
 If you are planning on working on the JS/frontend code, you should also do
 a link installation of the extension::
 
-    jupyter nbextension install [--sys-prefix / --user / --system] --symlink --py ipydatalist
+    jupyter nbextension install [--sys-prefix / --user / --system] --symlink --py ipycombobox
 
-    jupyter nbextension enable [--sys-prefix / --user / --system] --py ipydatalist
+    jupyter nbextension enable [--sys-prefix / --user / --system] --py ipycombobox
 
 with the `appropriate flag`_. Or, if you are using Jupyterlab::
 

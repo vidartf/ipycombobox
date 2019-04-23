@@ -1,22 +1,22 @@
 
-ipydatalist
+ipycombobox
 =====================================
 
 Version: |release|
 
-A widget for an <datalist> HMTL entry
+A widget for an <combobox> HMTL entry
 
 
 Quickstart
 ----------
 
-To get started with ipydatalist, install with pip::
+To get started with ipycombobox, install with pip::
 
-    pip install ipydatalist
+    pip install ipycombobox
 
 or with conda::
 
-    conda install ipydatalist
+    conda install ipycombobox
 
 
 Contents

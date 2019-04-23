@@ -8,5 +8,5 @@
 Information about the frontend package of the widgets.
 """
 
-module_name = "jupyter-datalist"
+module_name = "jupyter-combobox"
 module_version = "^0.1.0"

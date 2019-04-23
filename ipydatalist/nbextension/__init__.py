@@ -8,6 +8,6 @@ def _jupyter_nbextension_paths():
     return [{
         'section': 'notebook',
         'src': 'nbextension/static',
-        'dest': 'ipydatalist',
-        'require': 'ipydatalist/extension'
+        'dest': 'ipycombobox',
+        'require': 'ipycombobox/extension'
     }]

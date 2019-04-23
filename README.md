@@ -1,29 +1,29 @@
 
-# ipydatalist
+# ipycombobox
 
-[![Build Status](https://travis-ci.org/vidartf/ipydatalist.svg?branch=master)](https://travis-ci.org/vidartf/ipydatalist)
-[![codecov](https://codecov.io/gh/vidartf/ipydatalist/branch/master/graph/badge.svg)](https://codecov.io/gh/vidartf/ipydatalist)
+[![Build Status](https://travis-ci.org/vidartf/ipycombobox.svg?branch=master)](https://travis-ci.org/vidartf/ipycombobox)
+[![codecov](https://codecov.io/gh/vidartf/ipycombobox/branch/master/graph/badge.svg)](https://codecov.io/gh/vidartf/ipycombobox)
 
 
-A widget for an <datalist> HMTL entry
+A widget for an <combobox> HMTL entry
 
 ## Installation
 
 You can install using `pip`:
 
 ```bash
-pip install ipydatalist
+pip install ipycombobox
 ```
 
 Or if you use jupyterlab:
 
 ```bash
-pip install ipydatalist
+pip install ipycombobox
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 ```
 
 If you are using Jupyter Notebook 5.2 or earlier, you may also need to enable
 the nbextension:
 ```bash
-jupyter nbextension enable --py [--sys-prefix|--user|--system] ipydatalist
+jupyter nbextension enable --py [--sys-prefix|--user|--system] ipycombobox
 ```

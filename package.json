@@ -1,7 +1,7 @@
 {
-  "name": "jupyter-datalist",
+  "name": "jupyter-combobox",
   "version": "0.1.0",
-  "description": "A widget for an <datalist> HMTL entry",
+  "description": "A widget for an <combobox> HMTL entry",
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -12,9 +12,9 @@
     "lib/**/*.js",
     "dist/*.js"
   ],
-  "homepage": "https://github.com/vidartf/ipydatalist",
+  "homepage": "https://github.com/vidartf/ipycombobox",
   "bugs": {
-    "url": "https://github.com/vidartf/ipydatalist/issues"
+    "url": "https://github.com/vidartf/ipycombobox/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
@@ -25,18 +25,18 @@
   "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vidartf/ipydatalist"
+    "url": "https://github.com/vidartf/ipycombobox"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:nbextension",
-    "build:labextension": "npm run clean:labextension && mkdirp ipydatalist/labextension && cd ipydatalist/labextension && npm pack ../..",
+    "build:labextension": "npm run clean:labextension && mkdirp ipycombobox/labextension && cd ipycombobox/labextension && npm pack ../..",
     "build:lib": "tsc",
     "build:nbextension": "webpack -p",
     "build:all": "npm run build:labextension && npm run build:nbextension",
     "clean": "npm run clean:lib && npm run clean:nbextension",
     "clean:lib": "rimraf lib",
-    "clean:labextension": "rimraf ipydatalist/labextension",
-    "clean:nbextension": "rimraf ipydatalist/nbextension/static/index.js",
+    "clean:labextension": "rimraf ipycombobox/labextension",
+    "clean:nbextension": "rimraf ipycombobox/nbextension/static/index.js",
     "prepack": "npm run build:lib",
     "test": "npm run test:firefox",
     "test:chrome": "karma start --browsers=Chrome tests/karma.conf.js",

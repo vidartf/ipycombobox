@@ -6,7 +6,7 @@ define(function() {
     window['requirejs'].config({
         map: {
             '*': {
-                'jupyter-datalist': 'nbextensions/ipydatalist/index',
+                'jupyter-combobox': 'nbextensions/ipycombobox/index',
             },
         }
     });
