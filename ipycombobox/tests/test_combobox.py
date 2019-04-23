@@ -11,4 +11,6 @@ from ..combobox import Combobox
 
 def test_combobox_creation_blank():
     w = Combobox()
-    assert w.value == 'Hello World'
+    assert w.value == ''
+    assert w.options == ()
+    assert w.ensure_option == False
