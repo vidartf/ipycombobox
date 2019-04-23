@@ -1,0 +1,4 @@
+
+.widget-text input[type="text"].jpcombo-invalid-value {
+    background-color: #f004;
+}

@@ -44,10 +44,10 @@ package_data_spec = {
 }
 
 data_files_spec = [
-    ('share/jupyter/nbextensions/ipycombobox',
+    ('share/jupyter/nbextensions/jupyter-combobox',
         nb_path, '*.js*'),
     ('share/jupyter/lab/extensions', lab_path, '*.tgz'),
-    ('etc/jupyter/nbconfig/notebook.d' , HERE, 'ipycombobox.json')
+    ('etc/jupyter/nbconfig/notebook.d' , HERE, 'jupyter-combobox.json')
 ]
 
 

@@ -19,6 +19,9 @@ import {
   MODULE_NAME, MODULE_VERSION
 } from './version';
 
+
+import './style.css';
+
 const EXTENSION_ID = 'jupyter-combobox:plugin';
 
 /**

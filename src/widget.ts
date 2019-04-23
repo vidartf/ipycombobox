@@ -62,6 +62,9 @@ export class ComboboxView extends TextView {
       return;
     }
 
+    const valid = this.isValid(this.model.get('value'));
+    this.highlightValidState(valid);
+
     // Check if we need to update options
     if (options !== undefined && options.updated_view) {
       // Value update only, keep current options
@@ -76,23 +79,35 @@ export class ComboboxView extends TextView {
     }
   }
 
-  /**
-   * Handles user input.
-   *
-   * Calling model.set will trigger all of the other views of the
-   * model to update.
-   */
-  handleChanging(e: KeyboardEvent) {
+  isValid(value: string): boolean {
     if (true === this.model.get('ensure_option')) {
-      const target = e.target as HTMLInputElement;
       const options = this.model.get('options') as string[];
-      if (options.indexOf(target.value) === -1) {
-        this.highlightValidState(false);
-        return;
+      if (options.indexOf(value) === -1) {
+        return false;
       }
     }
-    this.highlightValidState(true);
-    super.handleChanging(e);
+    return true;
+  }
+
+  /**
+   * Handles user input.
+   */
+  handleChanging(e: KeyboardEvent) {
+    const target = e.target as HTMLInputElement;
+    const valid = this.isValid(target.value);
+    this.highlightValidState(valid);
+    if (valid) {
+      super.handleChanging(e);
+    }
+  }
+
+  handleChanged(e: KeyboardEvent) {
+    const target = e.target as HTMLInputElement;
+    const valid = this.isValid(target.value);
+    this.highlightValidState(valid);
+    if (valid) {
+      super.handleChanged(e);
+    }
   }
 
   highlightValidState(valid: boolean): void {

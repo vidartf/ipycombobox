@@ -8,9 +8,20 @@
 TODO: Add module docstring
 """
 
-from ipywidgets import Text, TypedTuple
+from ipywidgets import Text
 from traitlets import Unicode, Bool
 from ._frontend import module_name, module_version
+
+
+try:
+    from ipywidgets import TypedTuple
+except ImportError:
+    from traitlets import Container
+
+    class TypedTuple(Container):
+        """A trait for a tuple of any length with type-checked elements."""
+        klass = tuple
+        _cast_types = (list,)
 
 
 class Combobox(Text):
