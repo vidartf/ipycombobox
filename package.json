@@ -10,6 +10,7 @@
   ],
   "files": [
     "lib/**/*.js",
+    "styles/**/*.css",
     "dist/*.js"
   ],
   "homepage": "https://github.com/vidartf/ipycombobox",
@@ -48,10 +49,10 @@
     "watch:nbextension": "webpack --watch"
   },
   "dependencies": {
-    "@jupyter-widgets/base": "^1.1.10"
+    "@jupyter-widgets/base": "^1.1.10",
+    "@jupyter-widgets/controls": "^1.4.4"
   },
   "devDependencies": {
-    "@jupyter-widgets/controls": "^1.4.4",
     "@phosphor/application": "^1.6.0",
     "@phosphor/widgets": "^1.6.0",
     "@types/expect.js": "^0.3.29",

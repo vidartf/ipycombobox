@@ -20,7 +20,7 @@ import {
 } from './version';
 
 
-import './style.css';
+import '../styles/index.css';
 
 const EXTENSION_ID = 'jupyter-combobox:plugin';
 
