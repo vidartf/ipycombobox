@@ -6,9 +6,9 @@
 
 import pytest
 
-from ..example import ExampleWidget
+from ..combobox import Combobox
 
 
-def test_example_creation_blank():
-    w = ExampleWidget()
+def test_combobox_creation_blank():
+    w = Combobox()
     assert w.value == 'Hello World'

@@ -22,16 +22,16 @@ import {
 const EXTENSION_ID = 'jupyter-combobox:plugin';
 
 /**
- * The example plugin.
+ * The combobox plugin.
  */
-const examplePlugin: IPlugin<Application<Widget>, void> = {
+const comboboxPlugin: IPlugin<Application<Widget>, void> = {
   id: EXTENSION_ID,
   requires: [IJupyterWidgetRegistry],
   activate: activateWidgetExtension,
   autoStart: true
 };
 
-export default examplePlugin;
+export default comboboxPlugin;
 
 
 /**
