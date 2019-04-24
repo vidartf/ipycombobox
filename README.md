@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/vidartf/ipycombobox/branch/master/graph/badge.svg)](https://codecov.io/gh/vidartf/ipycombobox)
 
 
-A widget for an <combobox> HMTL entry
+A Jupyter-widgets combobox, based on using the `<datalist>` HTML5 tag.
 
 ## Installation
 
