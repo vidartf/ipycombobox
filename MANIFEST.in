@@ -3,11 +3,13 @@ include README.md
 
 include setupbase.py
 include pytest.ini
-include .coverage.rc
+include .coveragerc
+include readthedocs.yml
 
 include package.json
 include webpack.config.js
 include ipycombobox/labextension/*.tgz
+include ipycombobox.json
 
 # Documentation
 graft docs
@@ -25,10 +27,11 @@ prune tests/build
 
 # Javascript files
 graft ipycombobox/nbextension
-graft src
+graft js
 prune **/node_modules
-prune coverage
-prune lib
+prune js/coverage
+prune js/lib
+prune js/dist
 
 # Patterns to exclude from any directory
 global-exclude *~
