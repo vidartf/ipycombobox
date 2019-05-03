@@ -66,17 +66,23 @@ export class ComboboxView extends TextView {
     this.highlightValidState(valid);
 
     // Check if we need to update options
-    if (options !== undefined && options.updated_view) {
+    if (
+      (options !== undefined && options.updated_view) || (
+        !this.model.hasChanged('options') &&
+        !this.isInitialRender
+      )
+    ) {
       // Value update only, keep current options
       return;
     }
 
-    this.datalist.innerHTML = '';
-    for (let opt of this.model.get('options') as string[]) {
-      let el = document.createElement('option');
-      el.value = opt;
-      this.datalist.appendChild(el);
-    }
+    this.isInitialRender = false;
+
+    const opts = this.model.get('options') as string[];
+    const optLines = opts.map(o => {
+      return `<option value="${o}"></option>`
+    });
+    this.datalist.innerHTML = optLines.join('\n');
   }
 
   isValid(value: string): boolean {
@@ -119,4 +125,6 @@ export class ComboboxView extends TextView {
   }
 
   datalist: HTMLDataListElement | undefined;
+
+  isInitialRender = true;
 }
