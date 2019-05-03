@@ -12,7 +12,8 @@ import {
 } from './utils.spec';
 
 import {
-  ComboboxModel, ComboboxView
+  ComboboxModel,
+  ComboboxView
 } from '../../src/'
 
 
@@ -27,11 +28,73 @@ describe('Combobox', () => {
     });
 
     it('should be createable with a value', () => {
-      let state = { value: 'Foo Bar!' }
+      let state = { value: 'Foo Bar!' };
       let model = createTestModel(ComboboxModel, state);
       expect(model).to.be.an(ComboboxModel);
       expect(model.get('value')).to.be('Foo Bar!');
     });
+
+  });
+
+  describe('ComboboxView', () => {
+
+    beforeEach(async function () {
+      this.model = createTestModel(ComboboxModel);
+    });
+
+    it('construction', function () {
+      const options = {
+        model: this.model
+      };
+      const view = new ComboboxView(options);
+      expect(view).to.not.be(undefined);
+    });
+
+    it('no invalid flag when not checking', function () {
+      this.model.set({
+        value: 'ABC',
+        options: ['ABCDEF', '123', 'foobar'],
+        ensure_option: false,
+      });
+      const options = {
+        model: this.model
+      };
+      const view = new ComboboxView(options);
+      view.render();
+      expect(view.textbox.classList.contains(
+        'jpwidgets-invalidComboValue')).to.equal(false);
+    });
+
+    it('no invalid flag with valid value', function () {
+      this.model.set({
+        value: 'ABCDEF',
+        options: ['ABCDEF', '123', 'foobar'],
+        ensure_option: true,
+      });
+      const options = {
+        model: this.model
+      };
+      const view = new ComboboxView(options);
+      view.render();
+      expect(view.textbox.classList.contains(
+        'jpwidgets-invalidComboValue')).to.equal(false);
+    });
+
+    it('sets invalid flag when it should', function () {
+      this.model.set({
+        value: 'ABC',
+        options: ['ABCDEF', '123', 'foobar'],
+        ensure_option: true,
+      });
+      const options = {
+        model: this.model
+      };
+      const view = new ComboboxView(options);
+      view.render();
+      expect(view.textbox.classList.contains(
+        'jpwidgets-invalidComboValue')).to.equal(true);
+    });
+
 
   });
 
