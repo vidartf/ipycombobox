@@ -1,3 +1,7 @@
+# Deprecated
+
+This component has now been [merged into ipywidgets](https://github.com/jupyter-widgets/ipywidgets/pull/2390). As such, this repo is deprecated, and all issues/changes should be subitted to the ipywidgets repo.
+
 
 # ipycombobox
 
